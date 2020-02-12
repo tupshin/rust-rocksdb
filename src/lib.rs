@@ -96,6 +96,7 @@ pub struct DB {
 /// A descriptor for a RocksDB column family.
 ///
 /// A description of the column family, containing the name and `Options`.
+#[derive(Debug)]
 pub struct ColumnFamilyDescriptor {
     name: String,
     options: Options,
@@ -223,6 +224,7 @@ pub struct PlainTableFactoryOptions {
 ///    DB::open(&opts, path).unwrap()
 /// }
 /// ```
+#[derive(Debug)]
 pub struct Options {
     inner: *mut ffi::rocksdb_options_t,
 }
